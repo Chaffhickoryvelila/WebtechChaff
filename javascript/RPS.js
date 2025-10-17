@@ -5,13 +5,13 @@ var aiImage = document.getElementById("aichoice");
 
 function RPS(value) {
   if (value == "1") {
-    imageHolder.src = "/ASSETS/Rock.jpg";
+    imageHolder.src = "../ASSETS/Rock.jpg";
   } else if (value == "2") {
-    imageHolder.src = "/ASSETS/Paper.jpg";
+    imageHolder.src = "../ASSETS/Paper.jpg";
   } else if (value == "3") {
-    imageHolder.src = "/ASSETS/Scissor.jpg";
+    imageHolder.src = "../ASSETS/Scissor.jpg";
   } else {
-    imageHolder.src = "/ASSETS/LIL.jpg";
+    imageHolder.src = "../ASSETS/LIL.jpg";
   }
 }
 
@@ -29,11 +29,11 @@ function randomizer() {
 
  
   if (aiChoice == 1) {
-    aiImage.src = "/ASSETS/Rock.jpg";
+    aiImage.src = "../ASSETS/Rock.jpg";
   } else if (aiChoice == 2) {
-    aiImage.src = "/ASSETS/Paper.jpg";
+    aiImage.src = "../ASSETS/Paper.jpg";
   } else if (aiChoice == 3) {
-    aiImage.src = "/ASSETS/Scissor.jpg";
+    aiImage.src = "../ASSETS/Scissor.jpg";
   }
 
   
@@ -54,4 +54,5 @@ function getResult(player, ai) {
   } else {
     return "AI wins!";
   }
+
 }
