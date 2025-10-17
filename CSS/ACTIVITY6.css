@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.div2 {
+    height: 130px;
+    width: 130px;
+    border: 12px solid black;
+    border-radius: 50%;
+    border-right-color: aqua;
+    animation: spin 1s ease infinite;
+     
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.div1 :hover {
+  color: blanchedalmond;
+  cursor: auto;
+  text-shadow: 2px 2px blue;
+}

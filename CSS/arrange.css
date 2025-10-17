@@ -1,0 +1,20 @@
+body{
+     display: flex;
+     margin-left: 35%;
+     width: 100%;
+}
+
+.maincontainer {
+    color: rgb(116, 136, 61);
+    background-color: rgb(92, 43, 207);
+}
+
+.div2{
+    color: rgb(35, 175, 175);
+    background-color: rgb(194, 116, 14);
+}
+.div3{
+    color: chocolate;
+    background-color: rgb(102, 25, 25);
+}
+

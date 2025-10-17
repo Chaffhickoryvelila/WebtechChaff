@@ -1,0 +1,135 @@
+.h2 {
+    color: rgb(44, 141, 233);
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+.p1 {
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.facebookfont {
+    margin-top: 200px;
+    margin-left: 200px;
+    margin-right: 170px;
+}
+
+.div1 {
+    background-color: white;
+    width: 310px;
+    padding: 40px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px #aaa;
+    border-radius: 10px;
+    margin-top: 150px;
+    margin-right: 100px;
+    position: absolute;
+    left: 45%;
+
+
+}
+
+.loginbutton {
+    background-color: rgb(4, 121,225);
+    padding: 12px;
+    color: white;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    width: 325px;
+    padding: 10px;
+    text-align: center;
+    
+
+}
+
+.forgot{
+    text-align: center;
+    color:rgb(57, 110, 207);
+    
+}
+
+.createnewaccount{
+    text-align: center;
+    background-color: rgb(25, 158, 36);
+    padding: 12px;
+    color: white;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    padding: 10px;
+    margin-left: 50px;
+
+}
+
+
+.fb{
+    display: inline-flex;
+    margin-left: 100px;
+}
+
+.text{
+    padding: 10px;
+    padding-right:135px ;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(184, 183, 183);
+    border-radius: 6px;
+    font-size: 15px;
+    
+}
+
+.password{
+    padding: 10px;
+    padding-right:135px ;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(184, 183, 183);
+    border-radius: 6px;
+     font-size: 15px;
+}
+
+.loginbutton:hover{
+    background-color: rgb(68, 128, 206);
+    cursor: pointer;
+    transform: scale(1);
+    
+}
+.createnewaccount:hover{
+   background-color: rgb(37, 146, 37);
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.forgot:hover{
+    text-decoration: underline;
+}
+
+.underpar{
+    position: absolute;
+    top: 480px;
+    left: 750px;
+}
+
+.IP{
+    border: 1px solid rgb(184, 183, 183);
+}
+
+.TYPE:hover{
+      text-decoration: underline;
+}
+
+.text:hover{
+    border-color: blue;
+}
+.password:hover{
+     border-color: blue;
+}

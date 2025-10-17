@@ -1,0 +1,15 @@
+Activity 
+
+create a fortfolio - achievement with information about yourself 
+
+dapat mo redirect ang pages about me
+
+INSTEAD OF Activity TYPE INDEX.HTML
+
+  <div class="logo">Jensen Omega</div>
+    <div class="nav-text">
+      <span>Home</span>
+      <span>About</span>
+      <span>Projects</span>
+      <span>Contacts</span>
+    </div>

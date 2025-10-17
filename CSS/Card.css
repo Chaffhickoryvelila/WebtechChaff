@@ -1,0 +1,74 @@
+.div01 {
+    text-align: center;
+    font-family: cursive;
+}
+
+.cards .div1 {
+  
+    border-color: rgb(66, 12, 192);
+    background-color: lightskyblue;
+  
+}
+
+
+.cards .div2 {
+  
+    border-color: rgb(216, 141, 42);
+    background-color: lightgoldenrodyellow;
+
+}
+
+
+.cards .div3 {
+
+    border-color:rgb(85, 56, 56);
+    background-color: lightgrey;
+   
+}
+
+.cards .div4 {
+   
+    border-color: yellow;
+    background-color: lightslategray;
+    
+   
+ 
+}
+
+.cards .div5 {
+    border-color: rgb(233, 134, 233);
+    background-color: lightpink;
+}
+
+.cards div {
+    display: inline-block;
+    border-style: solid;
+    padding: 10px 10px;
+    width: 250px;
+    border-radius: 30px;
+    border: solid;
+    text-align: center;
+    height: 70%;
+    margin-left: 20px;
+    margin-right: 10px;
+    font-family: cursive;
+
+
+}
+.cards div:hover{
+    scale: 1.05;
+}
+
+.cards div img{
+    height: 150px;
+    max-width: 200px;
+    max-height: 150px;
+}
+
+
+.div01 :hover {
+  color: rgb(175, 104, 10);
+  cursor: auto;
+  text-shadow: lightcoral;
+}
+

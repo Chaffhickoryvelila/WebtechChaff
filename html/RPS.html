@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock vs Paper vs Scissor</title>
+  <link rel="stylesheet" href="/CSS/RPS.css" />
+  <style>
+    body {
+      background-image: url(/ASSETS/col.jpg);
+      background-repeat: no-repeat;
+      background-size: 180%;
+      font-family: cursive;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Let's Play a Game!</h1>
+  <h2>You Play! (Win or Lose)</h2>
+
+  <h3>Chaff's secret move:</h3>
+  <select id="selector" onchange="RPS(this.value)">
+    <option value="">Select</option>
+    <option value="1">Rock</option>
+    <option value="2">Paper</option>
+    <option value="3">Scissor</option>
+  </select>
+
+  <input type="button" value="Go Start!" onclick="randomizer()" />
+
+  <div class="container">
+    <div class="player">
+      <h3>Your Choice</h3>
+      <img src="/ASSETS/LIL.jpg" alt="Player" id="imgholder" />
+    </div>
+
+    <div class="vs">VS</div>
+
+    <div class="ai">
+      <h3>AI Choice</h3>
+      <img src=" /ASSETS/LIL.jpg" alt="AI" id="aichoice" />
+    </div>
+  </div>
+
+  <h2 id="result"></h2>
+
+ 
+  <script src="/javascript/RPS.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.div1{
+   
+    font-family: tahoma;
+    border-style:solid;
+}
+*{
+    margin:14px;
+    padding: 14px;
+}
+
+.div2{
+    background-color: lime;
+}
+.div3{
+    background-color: red;
+}
+
+
+
