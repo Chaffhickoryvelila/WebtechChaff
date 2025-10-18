@@ -3,6 +3,7 @@ body {
   padding-top: 100px;
   /* avoid overlap */
   scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Adjust this value to match your header's height */
 }
 
 /* mao ni ang header */
@@ -426,4 +427,5 @@ body {
     gap: 15px;
   }
 }
+
 
