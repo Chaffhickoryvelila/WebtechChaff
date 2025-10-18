@@ -345,3 +345,85 @@ body {
   text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
   transform: scale(1.05);
 }
+
+/* 🔻 Mobile & Tablet Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+
+  .operator {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-text {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .velila {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .chaff-content {
+    margin-bottom: 30px;
+  }
+
+  .chaff-content h2 {
+    font-size: 2rem;
+  }
+
+  .chaff-content p {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-chaff {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+
+  .Chaff-image img {
+    width: 80%;
+    margin-top: 0;
+  }
+
+  .about-section {
+    padding: 40px 20px;
+    max-width: 100%;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .contact-section {
+    padding: 40px 20px;
+    max-width: 100%;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
