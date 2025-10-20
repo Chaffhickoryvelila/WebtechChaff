@@ -290,3 +290,15 @@ header.operator {
     transform: translateY(0);
   }
 }
+
+/* ====== SECTION DIVIDER ====== */
+.section-divider {
+  width: 80%;
+  height: 2px;
+  margin: 50px auto;
+  background: linear-gradient(to right, transparent, #ff1a1a, transparent);
+  border: none;
+  border-radius: 2px;
+  opacity: 0.9;
+  box-shadow: 0 0 12px rgba(255, 26, 26, 0.6);
+}
