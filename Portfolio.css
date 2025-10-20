@@ -426,4 +426,46 @@ body {
     gap: 15px;
   }
 }
+/* Tablets */
+@media (max-width: 992px) {
+  .velila, .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Chaff-image img {
+    width: 80%;
+  }
+
+  .nav-text {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .velila {
+    flex-direction: column;
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .chaff-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .Chaff-image img {
+    width: 100%;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}
+
 
