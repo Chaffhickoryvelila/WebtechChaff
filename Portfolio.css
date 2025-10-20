@@ -1,141 +1,118 @@
-/* ==============================
-   GENERAL STYLES
-================================ */
+/* === MY code CSS hays === */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
+  background: url(../ASSETS/Port_background.avif) no-repeat center center fixed;
+  background-size: cover;
   color: white;
-  text-align: center;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  line-height: 1.5;
 }
 
-/* ==============================
-   HEADER
-================================ */
+/* === HEADER === */
 .operator {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 15px 10px;
+  background: rgba(20, 25, 35, 0.95);
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   position: sticky;
   top: 0;
-  z-index: 100;
-  text-align: center;
+  z-index: 1000;
 }
 
 .h1s {
-  font-size: 2rem;
-  letter-spacing: 2px;
+  font-size: 1.8rem;
   margin-bottom: 10px;
-  display: block;
+  letter-spacing: 2px;
 }
 
 .nav-text a {
   display: inline-block;
+  margin: 5px 10px;
   color: white;
+  font-weight: 600;
   text-decoration: none;
-  margin: 5px 15px;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s;
-}
-
-.nav-text a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: red;
-  bottom: -4px;
-  left: 0;
   transition: 0.3s;
 }
 
 .nav-text a:hover {
-  color: red;
+  color: #ff3b3b;
 }
 
-.nav-text a:hover::after {
-  width: 100%;
-}
-
-/* ==============================
-   HERO SECTION
-================================ */
+/* === HERO === */
 .velila {
-  padding: 60px 20px;
   text-align: center;
+  padding: 60px 15px;
 }
 
-.chaff-content,
-.Chaff-image {
+.chaff-content {
   display: inline-block;
   vertical-align: middle;
-  width: 45%;
-  min-width: 300px;
-  margin: 10px;
+  max-width: 450px;
 }
 
 .chaff-content h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
 }
 
 .highlight {
-  color: red;
+  color: #ff3b3b;
 }
 
 .chaff-content p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
 .portfolio-chaff {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 25px;
-  background: red;
+  background: none;
+  border: 2px solid #ff3b3b;
   color: white;
-  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 8px;
   font-weight: bold;
-  border-radius: 25px;
-  transition: background 0.3s, transform 0.3s;
+  transition: 0.3s;
 }
 
 .portfolio-chaff:hover {
-  background: darkred;
-  transform: scale(1.05);
+  background: #ff3b3b;
+}
+
+.Chaff-image {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 30px 0 0 20px;
 }
 
 .Chaff-image img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 50%;
-  border: 4px solid red;
-  transition: transform 0.4s;
+  width: 260px;
+  border-radius: 12px;
+  border: 3px solid #ff3b3b;
+  box-shadow: 0 0 15px rgba(255, 59, 59, 0.5);
 }
 
-.Chaff-image img:hover {
-  transform: scale(1.05);
-}
-
-/* ==============================
-   ABOUT SECTION
-================================ */
+/* === ABOUT === */
 .about-section {
+  background: rgba(15, 27, 43, 0.9);
+  border-radius: 12px;
   padding: 60px 20px;
+  margin: 60px auto;
+  max-width: 1000px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 .about-container {
-  display: inline-block;
-  text-align: left;
-  max-width: 1000px;
+  text-align: center;
 }
 
 .about-image,
@@ -149,190 +126,83 @@ body {
 
 .about-image img {
   width: 100%;
-  border-radius: 10px;
-  border: 3px solid red;
+  border-radius: 12px;
+  border: 3px solid #ff3b3b;
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.5);
 }
 
-.about-title {
-  color: red;
+.about-text h2 {
+  color: #ff3b3b;
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
 .about-text p {
-  line-height: 1.6;
+  font-size: 1rem;
+  color: #ddd;
+  text-align: justify;
   margin-bottom: 10px;
 }
 
-/* ==============================
-   PROJECTS SECTION
-================================ */
-.more-projects-section {
-  padding: 60px 20px;
-}
-
-.more-projects-title {
-  font-size: 2rem;
-  color: red;
-  margin-bottom: 20px;
-}
-
-.scroll-container {
-  white-space: normal;
-  text-align: center;
-}
-
-.project-card {
-  display: inline-block;
-  width: 300px;
-  margin: 10px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  padding: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-}
-
-/* ==============================
-   CONTACT SECTION
-================================ */
-.contact-section {
-  padding: 60px 20px;
-}
-
-.contact-title {
-  font-size: 2rem;
-  color: red;
-  margin-bottom: 15px;
-}
-
-.contact-info p,
-.social-links a {
-  margin: 8px 0;
-}
-
-.social-links a {
-  display: inline-block;
-  margin: 10px;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.social-links a:hover {
-  color: red;
-  transform: scale(1.1);
-}
-
-/* ==============================
-   DIVIDERS
-================================ */
-.section-divider {
-  border: none;
-  height: 2px;
-  background: red;
-  width: 60%;
-  margin: 40px auto;
-}
-
-/* ==============================
-   ANIMATIONS
-================================ */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
-}
-
-.fade-in.delay {
-  animation-delay: 0.3s;
-}
-
-.fade-in.delay2 {
-  animation-delay: 0.6s;
-}
-
-.fade-in.delay3 {
-  animation-delay: 0.9s;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ==============================
-   RESPONSIVE MEDIA QUERIES
-================================ */
-@media (max-width: 1024px) {
-  .h1s {
-    font-size: 1.8rem;
-  }
-  .chaff-content,
-  .Chaff-image,
+/* === RESPONSIVE FIX === */
+@media (max-width: 768px) {
   .about-image,
   .about-text {
+    display: block;
     width: 90%;
+    margin: 15px auto;
+  }
+
+  .about-text {
     text-align: center;
   }
-}
 
-@media (max-width: 768px) {
-  .operator {
-    padding: 10px;
+  .about-text p {
+    text-align: center;
+  }
+
+  .Chaff-image,
+  .chaff-content {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .Chaff-image img {
+    width: 80%;
+    margin-top: 20px;
   }
 
   .nav-text a {
     display: block;
-    margin: 8px 0;
+    margin: 5px 0;
   }
 
-  .chaff-content h2 {
-    font-size: 2rem;
-  }
-
-  .project-card {
-    width: 90%;
-  }
-
-  .about-image,
-  .about-text {
-    display: block;
-    width: 90%;
-    text-align: center;
+  .h1s {
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 480px) {
-  .h1s {
-    font-size: 1.4rem;
+  .about-section {
+    padding: 30px 10px;
   }
 
   .chaff-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
-  .portfolio-chaff {
-    padding: 8px 18px;
+  .chaff-content p {
+    font-size: 1rem;
   }
 
-  .project-card {
-    width: 95%;
+  .Chaff-image img {
+    width: 90%;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
   }
 }
-
 
 
