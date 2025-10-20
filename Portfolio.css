@@ -1,44 +1,47 @@
-/* === MY code CSS hays === */
+/* ====== GLOBAL RESET ====== */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
   background: url(../ASSETS/Port_background.avif) no-repeat center center fixed;
   background-size: cover;
-  color: white;
-  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  line-height: 1.5;
 }
 
-/* === HEADER === */
-.operator {
-  background: rgba(20, 25, 35, 0.95);
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  position: sticky;
+/* ====== HEADER ====== */
+header.operator {
+  position: fixed;
   top: 0;
+  width: 100%;
+  background: rgba(10, 15, 25, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px;
   z-index: 1000;
 }
 
 .h1s {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
   letter-spacing: 2px;
 }
 
+.nav-text {
+  display: flex;
+  gap: 20px;
+}
+
 .nav-text a {
-  display: inline-block;
-  margin: 5px 10px;
-  color: white;
-  font-weight: 600;
+  color: #fff;
   text-decoration: none;
+  font-weight: 500;
   transition: 0.3s;
 }
 
@@ -46,21 +49,35 @@ body {
   color: #ff3b3b;
 }
 
-/* === HERO === */
-.velila {
-  text-align: center;
-  padding: 60px 15px;
+/* ====== HAMBURGER MENU ====== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
 }
 
-.chaff-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 450px;
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  transition: 0.3s;
+}
+
+/* ====== INTRO SECTION ====== */
+.velila {
+  margin-top: 100px;
+  text-align: center;
+  padding: 60px 20px;
 }
 
 .chaff-content h2 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
 .highlight {
@@ -69,16 +86,16 @@ body {
 
 .chaff-content p {
   font-size: 1.1rem;
-  margin-bottom: 20px;
+  margin: 10px 0 20px;
 }
 
 .portfolio-chaff {
   display: inline-block;
-  background: none;
-  border: 2px solid #ff3b3b;
-  color: white;
   padding: 10px 25px;
+  color: #fff;
+  border: 2px solid #ff3b3b;
   border-radius: 8px;
+  text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -87,122 +104,189 @@ body {
   background: #ff3b3b;
 }
 
-.Chaff-image {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 30px 0 0 20px;
-}
-
 .Chaff-image img {
   width: 260px;
   border-radius: 12px;
+  margin-top: 25px;
   border: 3px solid #ff3b3b;
   box-shadow: 0 0 15px rgba(255, 59, 59, 0.5);
 }
 
-/* === ABOUT === */
+/* ====== ABOUT SECTION ====== */
 .about-section {
-  background: rgba(15, 27, 43, 0.9);
+  background: rgba(15, 25, 40, 0.9);
   border-radius: 12px;
-  padding: 60px 20px;
-  margin: 60px auto;
   max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 25px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-.about-container {
-  text-align: center;
+.about-title {
+  font-size: 2rem;
+  color: #ff3b3b;
+  margin-bottom: 20px;
 }
 
-.about-image,
-.about-text {
-  display: inline-block;
-  vertical-align: top;
-  width: 45%;
-  min-width: 300px;
-  margin: 10px;
+.about-text p {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto 20px;
 }
 
 .about-image img {
   width: 100%;
   border-radius: 12px;
   border: 3px solid #ff3b3b;
+  margin-top: 25px;
+  box-shadow: 0 0 15px rgba(255, 59, 59, 0.5);
+}
+
+/* ====== PROJECTS ====== */
+.more-projects-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.more-projects-title {
+  font-size: 2rem;
+  color: #ff3b3b;
+  margin-bottom: 40px;
+}
+
+.scroll-container {
+  display: inline-block;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.project-card {
+  display: inline-block;
+  background: rgba(20, 25, 35, 0.9);
+  border-radius: 12px;
+  margin: 10px;
+  width: 300px;
+  padding: 15px;
+  vertical-align: top;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(255, 59, 59, 0.5);
 }
 
-.about-text h2 {
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* ====== CONTACT SECTION ====== */
+.contact-section {
+  text-align: center;
+  background: rgba(15, 25, 40, 0.9);
+  padding: 50px 25px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.contact-title {
   color: #ff3b3b;
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
-.about-text p {
-  font-size: 1rem;
+.contact-info p {
+  margin: 8px 0;
   color: #ddd;
-  text-align: justify;
-  margin-bottom: 10px;
 }
 
-/* === RESPONSIVE FIX === */
-@media (max-width: 768px) {
-  .about-image,
-  .about-text {
-    display: block;
-    width: 90%;
-    margin: 15px auto;
-  }
+.contact-info a {
+  color: #ff3b3b;
+  text-decoration: none;
+}
 
-  .about-text {
-    text-align: center;
-  }
+.social-links a {
+  display: inline-block;
+  margin: 8px 10px;
+  color: #fff;
+  border: 1px solid #ff3b3b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
 
+.social-links a:hover {
+  background: #ff3b3b;
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (max-width: 900px) {
   .about-text p {
     text-align: center;
   }
+}
 
-  .Chaff-image,
-  .chaff-content {
-    display: block;
-    margin: 0 auto;
+@media (max-width: 768px) {
+  .nav-text {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(10, 15, 25, 0.95);
     text-align: center;
+    padding: 15px 0;
+  }
+
+  .nav-text.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
   }
 
   .Chaff-image img {
     width: 80%;
-    margin-top: 20px;
   }
 
-  .nav-text a {
-    display: block;
-    margin: 5px 0;
-  }
-
-  .h1s {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-section {
-    padding: 30px 10px;
-  }
-
-  .chaff-content h2 {
-    font-size: 1.8rem;
-  }
-
-  .chaff-content p {
-    font-size: 1rem;
-  }
-
-  .Chaff-image img {
+  .project-card {
     width: 90%;
+    margin: 15px auto;
   }
 
-  .about-text p {
-    font-size: 0.95rem;
+  .about-section {
+    padding: 40px 15px;
   }
 }
 
+/* ====== ANIMATIONS ====== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
