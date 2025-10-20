@@ -1,304 +1,67 @@
-/* ====== GLOBAL RESET ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  color: #fff;
-  background: url(../ASSETS/Port_background.avif) no-repeat center center fixed;
-  background-size: cover;
-  overflow-x: hidden;
-}
-
-/* ====== HEADER ====== */
-header.operator {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(10, 15, 25, 0.95);
+.operator, .velila, .about-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 25px;
-  z-index: 1000;
 }
 
-.h1s {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 2px;
-}
-
-.nav-text {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-text a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav-text a:hover {
-  color: #ff3b3b;
-}
-
-/* ====== HAMBURGER MENU ====== */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 28px;
-  height: 22px;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  height: 3px;
-  width: 100%;
-  background: #fff;
-  border-radius: 2px;
-  margin-bottom: 4px;
-  transition: 0.3s;
-}
-
-/* ====== INTRO SECTION ====== */
-.velila {
-  margin-top: 100px;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.chaff-content h2 {
-  font-size: 2.4rem;
-  font-weight: 700;
-}
-
-.highlight {
-  color: #ff3b3b;
-}
-
-.chaff-content p {
-  font-size: 1.1rem;
-  margin: 10px 0 20px;
-}
-
-.portfolio-chaff {
-  display: inline-block;
-  padding: 10px 25px;
-  color: #fff;
-  border: 2px solid #ff3b3b;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.portfolio-chaff:hover {
-  background: #ff3b3b;
-}
-
-.Chaff-image img {
-  width: 260px;
-  border-radius: 12px;
-  margin-top: 25px;
-  border: 3px solid #ff3b3b;
-  box-shadow: 0 0 15px rgba(255, 59, 59, 0.5);
-}
-
-/* ====== ABOUT SECTION ====== */
-.about-section {
-  background: rgba(15, 25, 40, 0.9);
-  border-radius: 12px;
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 60px 25px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.about-title {
-  font-size: 2rem;
-  color: #ff3b3b;
-  margin-bottom: 20px;
-}
-
-.about-text p {
-  color: #ddd;
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: justify;
-  max-width: 800px;
-  margin: 0 auto 20px;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 12px;
-  border: 3px solid #ff3b3b;
-  margin-top: 25px;
-  box-shadow: 0 0 15px rgba(255, 59, 59, 0.5);
-}
-
-/* ====== PROJECTS ====== */
-.more-projects-section {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.more-projects-title {
-  font-size: 2rem;
-  color: #ff3b3b;
-  margin-bottom: 40px;
-}
-
-.scroll-container {
-  display: inline-block;
-  width: 100%;
-  max-width: 1000px;
-  text-align: center;
-}
-
-.project-card {
-  display: inline-block;
-  background: rgba(20, 25, 35, 0.9);
-  border-radius: 12px;
-  margin: 10px;
-  width: 300px;
-  padding: 15px;
-  vertical-align: top;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 59, 59, 0.5);
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.project-card h3 {
-  color: #fff;
-  margin-bottom: 8px;
-}
-
-.project-card p {
-  font-size: 0.95rem;
-  color: #ccc;
-}
-
-/* ====== CONTACT SECTION ====== */
-.contact-section {
-  text-align: center;
-  background: rgba(15, 25, 40, 0.9);
-  padding: 50px 25px;
-  border-radius: 12px;
-  max-width: 900px;
-  margin: 50px auto;
-}
-
-.contact-title {
-  color: #ff3b3b;
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.contact-info p {
-  margin: 8px 0;
-  color: #ddd;
-}
-
-.contact-info a {
-  color: #ff3b3b;
-  text-decoration: none;
-}
-
-.social-links a {
-  display: inline-block;
-  margin: 8px 10px;
-  color: #fff;
-  border: 1px solid #ff3b3b;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.social-links a:hover {
-  background: #ff3b3b;
-}
-
-/* ====== MEDIA QUERIES ====== */
-@media (max-width: 900px) {
-  .about-text p {
-    text-align: center;
-  }
-}
-
+/* 📱 MOBILE RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  .nav-text {
-    display: none;
+  /* Make navigation stack vertically */
+  .operator {
     flex-direction: column;
-    width: 100%;
-    background: rgba(10, 15, 25, 0.95);
     text-align: center;
-    padding: 15px 0;
   }
 
-  .nav-text.active {
+  .nav-text {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
-  .menu-toggle {
-    display: flex;
+  /* Make intro section vertical */
+  .velila {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
   }
 
   .Chaff-image img {
     width: 80%;
+    max-width: 300px;
+    border-radius: 15px;
+  }
+
+  /* Make About section vertical */
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    padding: 15px;
+  }
+
+  /* Projects responsive grid */
+  .scroll-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .project-card {
     width: 90%;
-    margin: 15px auto;
+    margin-bottom: 20px;
   }
 
-  .about-section {
-    padding: 40px 15px;
+  /* Contact section text centered */
+  .contact-section {
+    text-align: center;
   }
-}
 
-/* ====== ANIMATIONS ====== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .contact-info p, 
+  .social-links a {
+    display: block;
+    margin: 5px 0;
   }
-}
-
-/* ====== SECTION DIVIDER ====== */
-.section-divider {
-  width: 80%;
-  height: 2px;
-  margin: 50px auto;
-  background: linear-gradient(to right, transparent, #ff1a1a, transparent);
-  border: none;
-  border-radius: 2px;
-  opacity: 0.9;
-  box-shadow: 0 0 12px rgba(255, 26, 26, 0.6);
 }
