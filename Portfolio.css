@@ -1,303 +1,289 @@
-body {
-  overflow-x: hidden;
-  padding-top: 100px;
-  /* avoid overlap */
-  scroll-behavior: smooth;
+/* =========================================
+   📁 Portfolio.css - Modern Responsive Version
+   Author: Chaff Hickory Velila
+   ========================================= */
+
+/* 🔹 Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* mao ni ang header */
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-image: url(../ASSETS/Port_background.avif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-top: 100px;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
 .operator {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 18px 50px;
   background: linear-gradient(to right, rgba(19, 33, 51, 0.95), rgba(34, 34, 49, 0.95));
   color: white;
-  font-family: 'Times New Roman', Times, serif;
-  margin: 10px 20px;
+  font-family: "Times New Roman", Times, serif;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(20, 20, 20, 0.3);
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 90%;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
   z-index: 1000;
+  transition: all 0.3s ease-in-out;
 }
 
-/* header ni siya katong CHAFF HICKORY VELILA nga naay color */
-.h1s {
-  color: white;
+/* Subtle sticky shrink effect */
+.operator.scrolled {
+  padding: 12px 40px;
+  background: rgba(20, 25, 40, 0.95);
 }
 
+/* Logo / Title */
 .h1s {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   user-select: none;
+  letter-spacing: 1px;
 }
 
-/* katong sa HOME,ABOUT,PROJECTS,CONTACTS */
+/* Navigation */
 .nav-text {
   display: flex;
-  gap: 30px;
-  font-weight: 500;
-  user-select: none;
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  gap: 25px;
+}
+
+.nav-text a {
   color: white;
+  font-weight: 600;
+  font-size: 1rem;
   text-decoration: none;
-  transition: 0.3s;
-
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.nav-text span:hover {
-  color: #ff3b3b;
-  cursor: pointer;
-
-}
-
-.nav-text span::after {
+.nav-text a::after {
   content: "";
   position: absolute;
-  bottom: -4px;
   left: 0;
+  bottom: -4px;
   width: 0%;
   height: 2px;
   background: #ff3b3b;
   transition: width 0.3s ease;
 }
 
-.nav-text span:hover::after {
+.nav-text a:hover {
+  color: #ff3b3b;
+}
+
+.nav-text a:hover::after {
   width: 100%;
 }
 
-.nav-text a:link,
-.nav-text a:visited {
-  color: white;
-  /* makes them white always */
-  text-decoration: none;
-}
-
-.nav-text a:hover {
-  color: #ff3b3b;
-  /* red on hover */
-}
-
-.nav-text a:active {
-  color: #ff0000;
-  /* optional: bright red when clicked */
-}
-
-
-@keyframes fadeDown {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* PICTURE-SECTION  */
+/* =========================================
+   HERO SECTION
+   ========================================= */
 .velila {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 100px;
+  flex-wrap: wrap;
+  padding: 100px 8%;
   min-height: 80vh;
   color: white;
+  gap: 40px;
 }
 
-/* mao ni ang h2 ug paragraph */
 .chaff-content {
   max-width: 600px;
-  margin-bottom: 290px;
+  animation: fadeUp 1.2s ease forwards;
 }
 
 .chaff-content h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
   line-height: 1.2;
   margin-bottom: 20px;
 }
 
-.chaff-content .highlight {
+.highlight {
   color: #ff3b3b;
 }
 
 .chaff-content p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #ff3b3b;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-/* mao ni ang sa portfolio katong naay home,about,etc naa gihapon nk sya sa chaff-content */
 .portfolio-chaff {
   display: inline-block;
-  padding: 12px 32px;
+  padding: 12px 36px;
   border: 2px solid #ff3b3b;
   border-radius: 8px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 59, 59, 0.4);
 }
 
 .portfolio-chaff:hover {
   background-color: #ff3b3b;
-  color: white;
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.6);
+  transform: scale(1.05);
 }
 
-
 .Chaff-image img {
-  width: 350px;
+  width: clamp(250px, 30vw, 350px);
   border-radius: 12px;
   border: 4px solid #f15454;
   box-shadow: 0 0 25px rgba(255, 59, 59, 0.6);
-  margin-top: -230px;
+  animation: fadeUp 1.5s ease forwards;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease forwards;
-}
-
-.fade-in.delay {
-  animation-delay: 0.4s;
-}
-
-.fade-in.delay2 {
-  animation-delay: 0.8s;
-}
-
-.fade-in.delay3 {
-  animation-delay: 1.2s;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
 .about-section {
-  padding: 100px 150px;
-  background-color: rgba(15, 27, 43, 0.85);
-  /*mao ni ang sa background box color */
-  color: white;
-  text-align: center;
-  border-radius: 12px;
-  margin: 50px auto;
-  max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.about-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #ff3b3b;
-}
-
-.about-section p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-
-.section-divider {
-  width: 60%;
-  margin: 50px auto;
-  margin-top: 8%;
-  border: none;
-  height: 3px;
-  background: linear-gradient(to right, transparent, #ff3b3b, transparent);
-  border-radius: 3px;
-}
-
-.about-section {
-  padding: 80px 100px;
+  padding: 80px 8%;
   background-color: rgba(15, 27, 43, 0.85);
   color: white;
   border-radius: 12px;
-  margin-top: 5%;
-  margin: 50px auto;
-  max-width: 1000px;
+  margin: 80px auto;
+  max-width: 1100px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-/* Container: makes image + text side by side */
+.about-section:hover {
+  transform: scale(1.01);
+}
+
 .about-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
-/* Image */
 .about-image img {
-  width: 300px;
+  width: clamp(220px, 30vw, 300px);
   border-radius: 12px;
   border: 4px solid #ff3b3b;
   box-shadow: 0 0 25px rgba(255, 59, 59, 0.6);
   object-fit: cover;
 }
 
-/* Text */
 .about-text {
   flex: 1;
-  text-align: left;
 }
 
 .about-text h2 {
   font-size: 2.5rem;
-  margin-bottom: 45px;
   color: #ff3b3b;
+  margin-bottom: 20px;
 }
 
 .about-text p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: 15px;
 }
 
-/* 🔹 Hover effect for About Me title */
-.about-title {
-  color: #ff3b3b;
-  font-size: 2.5rem;
-  font-weight: bold;
+/* =========================================
+   PROJECTS SECTION
+   ========================================= */
+.more-projects-section {
   text-align: center;
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease-in-out;
+  padding: 80px 5%;
+}
+
+.more-projects-title {
+  font-size: 2.5rem;
+  color: #ff3b3b;
+  margin-bottom: 40px;
+}
+
+.scroll-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project-card {
+  background-color: rgba(15, 27, 43, 0.9);
+  border-radius: 12px;
+  padding: 20px;
+  width: clamp(280px, 30%, 340px);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 
-.about-title:hover {
-  color: #00bfff; /* blue when hovered */
-  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
-  transform: scale(1.05);
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255, 59, 59, 0.4);
 }
 
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
 
+.project-card h3 {
+  color: #ff3b3b;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
 
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
 .contact-section {
-  padding: 100px 150px;
+  padding: 80px 8%;
   background-color: rgba(15, 27, 43, 0.85);
-  color: white;
-  text-align: center;
   border-radius: 12px;
-  margin: 50px auto;
+  margin: 80px auto;
   max-width: 900px;
+  text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-.contact-section h2 {
+.contact-section:hover {
+  transform: scale(1.01);
+}
+
+.contact-title {
+  color: #ff3b3b;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #ff3b3b;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.contact-section p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 15px;
+.contact-title:hover {
+  color: #00bfff;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #00bfff;
 }
 
 .contact-info p a {
@@ -312,160 +298,110 @@ body {
 }
 
 .social-links {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 25px;
+  margin-top: 20px;
 }
 
 .social-links a {
   color: white;
-  text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
   color: #ff3b3b;
+  transform: scale(1.1);
 }
 
-/* 🔹 Hover effect for Contact Me title */
-.contact-title {
-  color: #ff3b3b;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.contact-title:hover {
-  color: #00bfff; /* blue when hovered */
-  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
-  transform: scale(1.05);
+/* =========================================
+   MEDIA QUERIES
+   ========================================= */
+
+/* 🔸 Tablets */
+@media (max-width: 992px) {
+  .operator {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-text {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .velila {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .scroll-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-/* 🔻 Mobile & Tablet Responsive Styles */
-@media (max-width: 768px) {
+/* 🔹 Phones */
+@media (max-width: 600px) {
   body {
     padding-top: 80px;
   }
 
   .operator {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    width: 100%;
-    margin: 0;
+    padding: 15px 25px;
   }
 
   .nav-text {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    font-size: 16px;
-    margin-top: 10px;
+    gap: 12px;
   }
 
   .velila {
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
-  }
-
-  .chaff-content {
-    margin-bottom: 30px;
   }
 
   .chaff-content h2 {
-    font-size: 2rem;
-  }
-
-  .chaff-content p {
-    font-size: 1.2rem;
-  }
-
-  .portfolio-chaff {
-    padding: 10px 24px;
-    font-size: 1rem;
+    font-size: 1.8rem;
   }
 
   .Chaff-image img {
-    width: 80%;
-    margin-top: 0;
+    width: 90%;
   }
 
-  .about-section {
-    padding: 40px 20px;
-    max-width: 100%;
-  }
-
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-image img {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .about-text {
-    text-align: center;
-  }
-
+  .about-section,
   .contact-section {
-    padding: 40px 20px;
-    max-width: 100%;
-  }
-
-  .social-links {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-/* Tablets */
-@media (max-width: 992px) {
-  .velila, .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .Chaff-image img {
-    width: 80%;
-  }
-
-  .nav-text {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* Phones */
-@media (max-width: 600px) {
-  .velila {
-    flex-direction: column;
-    padding: 30px 15px;
-    text-align: center;
-  }
-
-  .chaff-content h2 {
-    font-size: 1.6rem;
-  }
-
-  .Chaff-image img {
-    width: 100%;
-  }
-
-  .about-container {
-    flex-direction: column;
+    padding: 50px 20px;
   }
 
   .project-card {
-    width: 100%;
+    width: 90%;
   }
 }
+
 
 
