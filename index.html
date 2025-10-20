@@ -5,17 +5,230 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chaff Hickory | Portfolio</title>
-  <link rel="icon" href=" ./ASSETS/Fire portfolio icon.jpg">
+  <link rel="icon" href="./ASSETS/Fire portfolio icon.jpg">
   <link rel="stylesheet" href="./CSS/Portfolio.css">
 
   <style>
-    /* 🔹 Background Settings - background sa imong webpage */
+    /* 🔹 Background Settings */
     body {
       background-image: url(./ASSETS/Port_background.avif);
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
       overflow-x: hidden;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* 🔹 Header */
+    header.operator {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-radius: 0 0 20px 20px;
+    }
+
+    header h1.h1s {
+      color: white;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    .nav-text {
+      display: flex;
+      gap: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-text a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-text a:hover {
+      color: red;
+    }
+
+    /* 🔹 Hamburger Button */
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* 🔹 Responsive Design */
+    @media (max-width: 900px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-text {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      .nav-text.active {
+        display: flex;
+      }
+    }
+
+    /* 🔹 Intro Section */
+    .velila {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 80px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .chaff-content {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .chaff-content h2 {
+      font-size: 2rem;
+    }
+
+    .highlight {
+      color: red;
+    }
+
+    .portfolio-chaff {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: 2px solid red;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .portfolio-chaff:hover {
+      background: red;
+    }
+
+    .Chaff-image img {
+      max-width: 280px;
+      border-radius: 15px;
+      margin-top: 20px;
+      border: 3px solid red;
+    }
+
+    /* 🔹 About Section */
+    .about-section {
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      width: 100%;
+      gap: 40px;
+    }
+
+    .about-text {
+      flex: 1 1 300px;
+      max-width: 450px;
+    }
+
+    .about-title {
+      font-size: 2rem;
+      color: red;
+    }
+
+    .about-image img {
+      width: 280px;
+      border-radius: 15px;
+      border: 2px solid red;
+    }
+
+    /* 🔹 Projects Section */
+    .more-projects-section {
+      text-align: center;
+      color: white;
+      padding: 50px 20px;
+    }
+
+    .scroll-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid red;
+      margin-bottom: 10px;
+    }
+
+    /* 🔹 Contact Section */
+    .contact-section {
+      text-align: center;
+      color: white;
+      padding: 50px 20px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: red;
+    }
+
+    /* 🔹 Dividers */
+    .section-divider {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 50px 0;
     }
   </style>
 </head>
@@ -29,6 +242,8 @@
       <span style="font-weight:bold;color: red;">V</span>EL<span style="font-weight:bold;color: red;">I</span>LA
     </h1>
 
+    <button class="menu-btn">☰</button>
+
     <!-- 🔹 Navigation Links -->
     <div class="nav-text">
       <a href="#">Home</a>
@@ -41,13 +256,12 @@
   <!-- 🔹 INTRO SECTION -->
   <section class="velila">
     <div class="chaff-content">
-      <h2 class="fade-in">Hi, my name is <br><span class="highlight">Chaff Hickory</span></h2>
-      <p class="fade-in delay">Explore more here!</p>
-      <a href="#projects" class="portfolio-chaff fade-in delay2">PORTFOLIO</a>
+      <h2>Hi, my name is <br><span class="highlight">Chaff Hickory</span></h2>
+      <p>Explore more here!</p>
+      <a href="#projects" class="portfolio-chaff">PORTFOLIO</a>
     </div>
 
-    <!-- 🔹 Imo Image -->
-    <div class="Chaff-image fade-in delay3">
+    <div class="Chaff-image">
       <img src="./ASSETS/myimageport.jpg" alt="Chaff Hickory">
     </div>
   </section>
@@ -77,30 +291,25 @@
   <section id="projects" class="more-projects-section">
     <h2 class="more-projects-title">More Projects</h2>
 
-    <!-- 🔹 Project Cards -->
     <div class="scroll-container">
-      <!-- Card 1 -->
-      <div class="project-card" onclick="window.location.href='./html/Card.html'" style="cursor: pointer;">
+      <div class="project-card" onclick="window.location.href='./html/Card.html'">
         <img src="./ASSETS/Cardsportfol.jpg" alt="Project 1">
         <h3>Card's Website</h3>
         <p>A card is a compact, rectangular UI component that groups related content image, title, short text, and
           actions</p>
       </div>
 
-      <!-- Card 2 -->
-      <div class="project-card" onclick="window.location.href='./html/Resume.html'" style="cursor: pointer;">
+      <div class="project-card" onclick="window.location.href='./html/Resume.html'">
         <img src="./ASSETS/resumeport.jpg" alt="Project 2">
         <h3>Resume Website</h3>
-        <p>A resume is a personal page that showcases your personal background, skills, experience,
-          and achievements in a visually appealing and interactive format.</p>
+        <p>A resume is a personal page that showcases your personal background, skills, experience, and achievements.
+        </p>
       </div>
 
-      <!-- Card 3 -->
-      <div class="project-card" onclick="window.location.href='./html/Recreate.html'" style="cursor: pointer;">
+      <div class="project-card" onclick="window.location.href='./html/Recreate.html'">
         <img src="./ASSETS/Emailport.jpg" alt="Project 3">
         <h3>Internet Mail Account</h3>
-        <p>An Internet mail account is a service that allows users to send, receive, and manage emails over the
-          internet.</p>
+        <p>An Internet mail account allows users to send, receive, and manage emails online.</p>
       </div>
     </div>
   </section>
@@ -112,14 +321,12 @@
     <h2 class="contact-title">Contact Me ✆</h2>
     <p>If you'd like to get in touch, feel free to reach out using any of the platforms below!</p>
 
-    <!-- 🔹 Contact Info -->
     <div class="contact-info">
       <p><strong>✉ Email:</strong> <a href="mailto:chaffvelila@gmail.com">chaffvelila@gmail.com</a></p>
       <p><strong>✆ Phone:</strong> <a href="tel:number">09630989558 / 09912711001</a></p>
       <p><strong>⚲ Location:</strong> Digos City, Davao del Sur</p>
     </div>
 
-    <!-- 🔹 Social Links -->
     <div class="social-links">
       <a href="https://www.facebook.com/share/19gbAXWMbb/" target="_blank">Facebook</a>
       <a href="https://github.com/Chaffhickoryvelila" target="_blank">GitHub</a>
@@ -127,8 +334,15 @@
     </div>
   </section>
 
+  <!-- 🔹 JavaScript for Menu Toggle -->
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navText = document.querySelector('.nav-text');
+
+    menuBtn.addEventListener('click', () => {
+      navText.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>
-
-
