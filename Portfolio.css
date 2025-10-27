@@ -1,327 +1,171 @@
 body {
+  background-image: url(../ASSETS/Port_background.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   overflow-x: hidden;
-  padding-top: 100px;
-  /* avoid overlap */
   scroll-behavior: smooth;
-}
-
-/* mao ni ang header */
-.operator {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background: linear-gradient(to right, rgba(19, 33, 51, 0.95), rgba(34, 34, 49, 0.95));
   color: white;
-  font-family: 'Times New Roman', Times, serif;
-  margin: 10px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(20, 20, 20, 0.3);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 90%;
-  z-index: 1000;
-}
-
-/* header ni siya katong CHAFF HICKORY VELILA nga naay color */
-.h1s {
-  color: white;
-}
-
-.h1s {
-  font-size: 2rem;
-  user-select: none;
-}
-
-/* katong sa HOME,ABOUT,PROJECTS,CONTACTS */
-.nav-text {
-  display: flex;
-  gap: 30px;
-  font-weight: 500;
-  user-select: none;
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+}
+
+/* 🔹 NAVBAR */
+.navbar {
+  background: linear-gradient(to right, rgba(19, 33, 51, 0.95), rgba(34, 34, 49, 0.95));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.navbar-brand span {
+  color: red;
+}
+
+.nav-link {
+  color: white !important;
   font-weight: 600;
-  color: white;
-  text-decoration: none;
   transition: 0.3s;
-
 }
 
-.nav-text span:hover {
-  color: #ff3b3b;
-  cursor: pointer;
-
+.nav-link:hover {
+  color: #ff3b3b !important;
 }
 
-.nav-text span::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: #ff3b3b;
-  transition: width 0.3s ease;
+.navbar-toggler {
+  border: none;
+  outline: none;
 }
 
-.nav-text span:hover::after {
-  width: 100%;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='white' class='bi bi-list' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M2.5 12a.5.5 0 010-1h11a.5.5 0 010 1H2.5zm0-4a.5.5 0 010-1h11a.5.5 0 010 1H2.5zm0-4a.5.5 0 010-1h11a.5.5 0 010 1H2.5z'/%3E%3C/svg%3E");
 }
 
-.nav-text a:link,
-.nav-text a:visited {
-  color: white;
-  /* makes them white always */
-  text-decoration: none;
-}
-
-.nav-text a:hover {
-  color: #ff3b3b;
-  /* red on hover */
-}
-
-.nav-text a:active {
-  color: #ff0000;
-  /* optional: bright red when clicked */
-}
-
-
-@keyframes fadeDown {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* PICTURE-SECTION  */
-.velila {
+/* 🔹 HERO */
+.hero {
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 80px 100px;
-  min-height: 80vh;
-  color: white;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 120px 20px 80px;
+  text-align: center;
 }
 
-/* mao ni ang h2 ug paragraph */
-.chaff-content {
-  max-width: 600px;
-  margin-bottom: 290px;
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
-.chaff-content h2 {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.chaff-content .highlight {
+.highlight {
   color: #ff3b3b;
 }
 
-.chaff-content p {
-  font-size: 1.5rem;
-  color: #ff3b3b;
-  margin-bottom: 30px;
-}
-
-/* mao ni ang sa portfolio katong naay home,about,etc naa gihapon nk sya sa chaff-content */
-.portfolio-chaff {
+.portfolio-btn {
   display: inline-block;
+  margin-top: 20px;
   padding: 12px 32px;
   border: 2px solid #ff3b3b;
   border-radius: 8px;
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  transition: 0.3s;
+  font-weight: 600;
 }
 
-.portfolio-chaff:hover {
+.portfolio-btn:hover {
   background-color: #ff3b3b;
   color: white;
 }
 
-
-.Chaff-image img {
-  width: 350px;
+.hero img {
+  width: 300px;
   border-radius: 12px;
-  border: 4px solid #f15454;
+  border: 4px solid #ff3b3b;
   box-shadow: 0 0 25px rgba(255, 59, 59, 0.6);
-  margin-top: -230px;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease forwards;
-}
-
-.fade-in.delay {
-  animation-delay: 0.4s;
-}
-
-.fade-in.delay2 {
-  animation-delay: 0.8s;
-}
-
-.fade-in.delay3 {
-  animation-delay: 1.2s;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.about-section {
-  padding: 100px 150px;
-  background-color: rgba(15, 27, 43, 0.85);
-  /*mao ni ang sa background box color */
-  color: white;
-  text-align: center;
-  border-radius: 12px;
-  margin: 50px auto;
-  max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.about-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #ff3b3b;
-}
-
-.about-section p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 15px;
+  margin-top: 30px;
 }
 
 .section-divider {
   width: 60%;
-  margin: 50px auto;
-  margin-top: 8%;
+  margin: 60px auto;
   border: none;
   height: 3px;
   background: linear-gradient(to right, transparent, #ff3b3b, transparent);
   border-radius: 3px;
 }
 
+/* 🔹 ABOUT */
 .about-section {
-  padding: 80px 100px;
   background-color: rgba(15, 27, 43, 0.85);
-  color: white;
   border-radius: 12px;
-  margin-top: 5%;
-  margin: 50px auto;
-  max-width: 1000px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 60px 30px;
 }
 
-/* Container: makes image + text side by side */
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-/* Image */
-.about-image img {
-  width: 300px;
+.about-section img {
+  width: 100%;
+  max-width: 300px;
   border-radius: 12px;
   border: 4px solid #ff3b3b;
   box-shadow: 0 0 25px rgba(255, 59, 59, 0.6);
-  object-fit: cover;
 }
 
-/* Text */
-.about-text {
-  flex: 1;
-  text-align: left;
-}
-
-.about-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 45px;
+.about-section h2 {
   color: #ff3b3b;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.about-text p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+/* 🔹 PROJECTS */
+.project-card {
+  background-color: rgba(15, 27, 43, 0.9);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+  height: 100%;
+  border: 2px solid transparent;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  border: 2px solid #ff3b3b;
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.6);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
-/* 🔹 Hover effect for About Me title */
-.about-title {
+.more-projects-title {
   color: #ff3b3b;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+  margin-bottom: 30px;
 }
 
-.about-title:hover {
-  color: #00bfff; /* blue when hovered */
-  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
-  transform: scale(1.05);
-}
-
-
-
+/* 🔹 CONTACT */
 .contact-section {
-  padding: 100px 150px;
   background-color: rgba(15, 27, 43, 0.85);
-  color: white;
-  text-align: center;
   border-radius: 12px;
-  margin: 50px auto;
-  max-width: 900px;
+  padding: 60px 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.contact-section h2 {
-  font-size: 2.5rem;
+.contact-title {
+  color: #ff3b3b;
   margin-bottom: 20px;
-  color: #ff3b3b;
-}
-
-.contact-section p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-
-.contact-info p a {
-  color: #ff3b3b;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.contact-info p a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-.social-links {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
 }
 
 .social-links a {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  margin: 0 10px;
   transition: color 0.3s ease;
 }
 
@@ -329,142 +173,24 @@ body {
   color: #ff3b3b;
 }
 
-/* 🔹 Hover effect for Contact Me title */
-.contact-title {
-  color: #ff3b3b;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.contact-title:hover {
-  color: #00bfff; /* blue when hovered */
-  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
-  transform: scale(1.05);
-}
-
-/* 🔻 Mobile & Tablet Responsive Styles */
+/* 🔹 RESPONSIVE */
 @media (max-width: 768px) {
-  body {
-    padding-top: 80px;
-  }
-
-  .operator {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    width: 100%;
-    margin: 0;
-  }
-
-  .nav-text {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    font-size: 16px;
-    margin-top: 10px;
-  }
-
-  .velila {
-    flex-direction: column;
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .chaff-content {
-    margin-bottom: 30px;
-  }
-
-  .chaff-content h2 {
+  .hero h2 {
     font-size: 2rem;
   }
 
-  .chaff-content p {
-    font-size: 1.2rem;
-  }
-
-  .portfolio-chaff {
-    padding: 10px 24px;
-    font-size: 1rem;
-  }
-
-  .Chaff-image img {
+  .hero img {
     width: 80%;
-    margin-top: 0;
   }
 
-  .about-section {
-    padding: 40px 20px;
-    max-width: 100%;
-  }
-
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-image img {
+  .about-section img {
     width: 80%;
     margin-bottom: 20px;
   }
 
-  .about-text {
-    text-align: center;
-  }
-
-  .contact-section {
-    padding: 40px 20px;
-    max-width: 100%;
-  }
-
-  .social-links {
-    flex-direction: column;
-    gap: 15px;
+  .navbar-collapse {
+    background: rgba(19, 33, 51, 0.98);
+    padding: 20px;
+    border-radius: 12px;
   }
 }
-/* Tablets */
-@media (max-width: 992px) {
-  .velila, .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .Chaff-image img {
-    width: 80%;
-  }
-
-  .nav-text {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* Phones */
-@media (max-width: 600px) {
-  .velila {
-    flex-direction: column;
-    padding: 30px 15px;
-    text-align: center;
-  }
-
-  .chaff-content h2 {
-    font-size: 1.6rem;
-  }
-
-  .Chaff-image img {
-    width: 100%;
-  }
-
-  .about-container {
-    flex-direction: column;
-  }
-
-  .project-card {
-    width: 100%;
-  }
-}
-
