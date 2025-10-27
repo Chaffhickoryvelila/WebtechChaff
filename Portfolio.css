@@ -3,7 +3,9 @@ body {
   overflow-x: hidden;
   padding-top: 100px;
   scroll-behavior: smooth;
-  background-color: #0f1b2b;
+  background: url('your-background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: scroll; /* fixes issue on Android */
   font-family: 'Times New Roman', Times, serif;
   color: white;
 }
@@ -308,6 +310,26 @@ body {
   color: #ff3b3b;
 }
 
+/* ===== SECTION DIVIDER ===== */
+.section-divider {
+  border: none;
+  height: 2px;
+  width: 80%;
+  margin: 40px auto;
+  background-color: red;
+  box-shadow: 0 0 10px red, 0 0 20px rgba(255, 0, 0, 0.6);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px red, 0 0 10px rgba(255, 0, 0, 0.4);
+  }
+  to {
+    box-shadow: 0 0 15px red, 0 0 30px rgba(255, 0, 0, 0.7);
+  }
+}
+
 /* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 992px) {
   .operator {
@@ -339,13 +361,10 @@ body {
     text-align: center;
   }
 
-  .Chaff-image img {
-    width: 80%;
-    margin-top: 0;
-  }
-
+  .Chaff-image img,
   .about-image img {
     width: 80%;
+    margin-top: 0;
   }
 
   .scroll-container {
@@ -366,25 +385,4 @@ body {
   .social-links {
     flex-direction: column;
   }
-} 
-
-.section-divider {
-  border: none;
-  height: 2px;
-  width: 80%;
-  margin: 40px auto;
-  background-color: red;
-  box-shadow: 0 0 10px red, 0 0 20px rgba(255, 0, 0, 0.6);
-  animation: glow 2s infinite alternate;
 }
-
-@keyframes glow {
-  from {
-    box-shadow: 0 0 5px red, 0 0 10px rgba(255, 0, 0, 0.4);
-  }
-  to {
-    box-shadow: 0 0 15px red, 0 0 30px rgba(255, 0, 0, 0.7);
-  }
-}
-
-
