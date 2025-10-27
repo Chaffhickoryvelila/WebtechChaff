@@ -308,16 +308,6 @@ body {
   color: #ff3b3b;
 }
 
-/* ===== DIVIDER ===== */
-.section-divider {
-  width: 60%;
-  margin: 50px auto;
-  border: none;
-  height: 3px;
-  background: linear-gradient(to right, transparent, #ff3b3b, transparent);
-  border-radius: 3px;
-}
-
 /* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 992px) {
   .operator {
@@ -396,4 +386,5 @@ body {
     box-shadow: 0 0 15px red, 0 0 30px rgba(255, 0, 0, 0.7);
   }
 }
+
 
