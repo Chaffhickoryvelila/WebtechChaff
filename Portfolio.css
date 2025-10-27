@@ -35,13 +35,14 @@ body {
   color: #ff3b3b !important;
 }
 
+/* Hamburger icon styling */
 .navbar-toggler {
   border: none;
-  outline: none;
+  box-shadow: none !important;
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='white' class='bi bi-list' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M2.5 12a.5.5 0 010-1h11a.5.5 0 010 1H2.5zm0-4a.5.5 0 010-1h11a.5.5 0 010 1H2.5zm0-4a.5.5 0 010-1h11a.5.5 0 010 1H2.5z'/%3E%3C/svg%3E");
+  filter: invert(1);
 }
 
 /* 🔹 HERO */
@@ -89,6 +90,7 @@ body {
   margin-top: 30px;
 }
 
+/* Divider */
 .section-divider {
   width: 60%;
   margin: 60px auto;
@@ -129,6 +131,7 @@ body {
   transition: 0.3s;
   height: 100%;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 
 .project-card:hover {
