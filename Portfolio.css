@@ -1,33 +1,38 @@
-/* ======== GENERAL BODY ======== */
+/* ====== GLOBAL ====== */
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* ← same as your old font */
   color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-/* ======== NAVBAR HEADER ======== */
+/* ====== HEADER / NAVBAR ====== */
 .operator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
   background: linear-gradient(to right, rgba(19, 33, 51, 0.95), rgba(34, 45, 68, 0.95));
-  padding: 15px 60px;
   border-bottom: 2px solid red;
 }
 
 .h1s {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: bold;
   margin: 0;
+  letter-spacing: 1px;
 }
 
 .nav-text {
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
 
 .nav-text a {
   text-decoration: none;
   color: white;
+  font-size: 16px;
   font-weight: 500;
   transition: 0.3s;
 }
@@ -36,29 +41,28 @@ body {
   color: red;
 }
 
-/* ======== BOOTSTRAP HAMBURGER FIX ======== */
+/* ====== HAMBURGER ====== */
 .navbar-toggler {
   border: none;
-  outline: none;
+  background: transparent;
 }
 
 .navbar-toggler-icon {
-  filter: invert(100%); /* makes hamburger icon white */
+  filter: invert(100%); /* white lines */
 }
 
 .navbar-toggler:focus {
   box-shadow: none;
 }
 
-/* ======== HERO SECTION ======== */
+/* ====== HERO / INTRO SECTION ====== */
 .velila {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   min-height: 100vh;
-  padding: 100px 20px 40px 20px;
-  text-align: center;
+  padding: 120px 20px 60px 20px;
 }
 
 .chaff-content {
@@ -67,23 +71,22 @@ body {
 
 .chaff-content h2 {
   font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .highlight {
   color: red;
-  font-weight: bold;
 }
 
 .portfolio-chaff {
   display: inline-block;
   background-color: red;
   color: white;
-  padding: 10px 20px;
   text-decoration: none;
+  padding: 10px 20px;
   border-radius: 10px;
-  font-weight: 600;
+  margin-top: 10px;
+  font-weight: bold;
   transition: 0.3s;
 }
 
@@ -98,7 +101,7 @@ body {
   box-shadow: 0 0 15px red;
 }
 
-/* ======== SECTION DIVIDERS ======== */
+/* ====== DIVIDER ====== */
 .section-divider {
   border: none;
   border-top: 2px solid red;
@@ -106,29 +109,21 @@ body {
   margin: 40px auto;
 }
 
-/* ======== ABOUT SECTION ======== */
+/* ====== ABOUT SECTION ====== */
 .about-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   padding: 60px 20px;
-  gap: 40px;
-}
-
-.about-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1000px;
   justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 
 .about-image img {
   width: 280px;
   border-radius: 20px;
   border: 2px solid red;
-  box-shadow: 0 0 10px red;
+  box-shadow: 0 0 15px red;
 }
 
 .about-text {
@@ -136,16 +131,22 @@ body {
   text-align: justify;
 }
 
-/* ======== PROJECTS SECTION ======== */
+.about-title {
+  color: red;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* ====== PROJECT SECTION ====== */
 .more-projects-section {
-  padding: 60px 20px;
   text-align: center;
+  padding: 60px 20px;
 }
 
 .more-projects-title {
-  font-size: 2rem;
   color: red;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .scroll-container {
@@ -159,11 +160,16 @@ body {
 .project-card {
   flex: 0 0 300px;
   background: rgba(255, 255, 255, 0.05);
+  border: 1px solid red;
   border-radius: 15px;
   padding: 15px;
-  border: 1px solid red;
-  transition: 0.3s;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px red;
 }
 
 .project-card img {
@@ -172,21 +178,16 @@ body {
   margin-bottom: 10px;
 }
 
-.project-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 15px red;
-}
-
-/* ======== CONTACT SECTION ======== */
+/* ====== CONTACT SECTION ====== */
 .contact-section {
   text-align: center;
   padding: 60px 20px;
 }
 
 .contact-title {
-  font-size: 2rem;
   color: red;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .contact-info a {
@@ -202,12 +203,12 @@ body {
 }
 
 .social-links a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   background: red;
   padding: 8px 15px;
   border-radius: 10px;
-  font-weight: 500;
+  font-weight: bold;
   transition: 0.3s;
 }
 
@@ -215,13 +216,13 @@ body {
   background: darkred;
 }
 
-/* ======== RESPONSIVE STYLES ======== */
+/* ====== RESPONSIVE DESIGN ====== */
 @media (max-width: 992px) {
   .nav-text {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
     padding: 15px 0;
+    gap: 15px;
   }
 
   .velila {
@@ -229,12 +230,11 @@ body {
     text-align: center;
   }
 
-  .about-container {
+  .about-section {
     flex-direction: column;
   }
 
   .project-card {
     flex: 0 0 85%;
-    margin: auto;
   }
 }
