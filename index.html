@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,19 +8,21 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="./CSS/Portfolio.css" />
 </head>
-
 <body>
-  <!-- 🔹 NAVBAR WITH HAMBURGER -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-    <div class="container-fluid px-4">
+  <!-- 🔹 NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
       <a class="navbar-brand fw-bold" href="#">
         <span>C</span>HAFF HIC<span style="color:red;">K</span>ORY VEL<span style="color:red;">I</span>LA
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <!-- Hamburger Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Navbar Links -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav text-center">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -49,7 +50,7 @@
   <section id="about" class="about-section container text-center my-5">
     <div class="row align-items-center g-4">
       <div class="col-md-5">
-        <img src="./ASSETS/aboutmepicport.jpg" alt="Chaff Hickory">
+        <img src="./ASSETS/aboutmepicport.jpg" alt="About Me">
       </div>
       <div class="col-md-7 text-start text-md-start">
         <h2>About Me</h2>
@@ -71,7 +72,7 @@
         <div class="project-card" onclick="window.location.href='./html/Card.html'">
           <img src="./ASSETS/Cardsportfol.jpg" alt="Card Project">
           <h3>Card's Website</h3>
-          <p>A compact UI component grouping related content such as an image, title, and actions.</p>
+          <p>A compact rectangular UI component grouping related content such as an image, title, and actions.</p>
         </div>
       </div>
       <div class="col-md-4">
@@ -111,6 +112,7 @@
     </div>
   </section>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
