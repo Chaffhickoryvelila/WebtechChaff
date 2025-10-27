@@ -2,85 +2,166 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaff | Resume</title>
-    <link rel="icon" href=" ../ASSETS/resume.webp">
-    <link rel="stylesheet" href=" ../CSS/resume.css">
-    <style>
-        body {
-            background-image: url( ../ASSETS/NewresumeBG.jpg);
-            background-repeat: no-repeat;
-            background-size: 180%;
-            font-family: cursive;
-            display: inline-block;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaff | Resume</title>
+  <link rel="icon" href="../ASSETS/resume.webp">
+  <link rel="stylesheet" href="../CSS/resume.css">
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: cursive;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* ✅ Fixed, Android-safe background image */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../ASSETS/NewresumeBG.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      opacity: 1;
+    }
+
+    /* ✅ Optional: dark overlay for readability */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2); /* adjust transparency here */
+      z-index: -1;
+    }
+
+    .divpicture {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .imgsource {
+      border-radius: 10%;
+    }
+
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div6 {
+      background: rgba(15, 27, 43, 0.8);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    h2,
+    h4 {
+      margin: 10px 0;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    span {
+      color: #ff3b3b;
+    }
+
+    @media (max-width: 768px) {
+      .div1,
+      .div2,
+      .div3,
+      .div4,
+      .div5,
+      .div6 {
+        width: 90%;
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="divpicture">
-        
-        <img class="imgsource" src="../ASSETS/mypic.jpg" alt="" height="203" style="border-radius:10% ;">
+  <div class="divpicture">
+    <img class="imgsource" src="../ASSETS/mypic.jpg" alt="Profile Picture" height="203">
+  </div>
+
+  <div class="div1">
+    <h2>CHAFF HICKORY A. VELILA <br> Web Developer/Designer</h2>
+    <h4>17 years old</h4>
+    <h4>🕮 Senior High School Student</h4>
+    <div class="div4">
+      <h4>✉ chaffvelila@gmail.com</h4>
     </div>
+    <h4>✆ Contact No: 09630989558</h4>
+    <h4>🏠 Address: San Agustin Purok 7, Digos City, Davao Del Sur</h4>
+  </div>
 
-    <div class="div1">
-        <h2>CHAFF HICKORY A. VELILA <br> Web Developer/Designer</h2>
-        <h4>17 years old</h4>
-        <h4> 🕮 Senior High School Student</h4>
-        <div class="div4">
-            <h4> ✉ chaffvelila@gmail.com</h4>
-        </div>
-        <h4> ✆ Contact No:09630989558</h4>
-        <h4> 🏠︎ Address: San Agustin Purok 7, Digos City, Davao Del Sur</h4>
-    </div>
+  <div class="div6">
+    <p><span>✓ Profile:</span><br>
+      My name is Chaff Hickory A. Velila, an ICT student at
+      the University of Mindanao Digos College with a flair for full-stack web development and a love of clean,
+      efficient code.
+      Whether rapidly prototyping responsive sites or fine-tuning backend logic,
+      I thrive on turning ideas into polished digital experiences—channeling focus and strategy into every project.
+    </p>
+  </div>
 
-    <div class="div6">
-        <p> <span style="font-weight:bold;"> ✓ Profile:</span> <br>
-            My name is Chaff Hickory A. Velila an ICT student at
-            the University of Mindanao Digos College with a flair for full-stack web development and a love of clean,
-            efficient code.
-            Whether rapidly prototyping responsive sites or fine-tuning backend logic,
-            I thrive on turning ideas into polished digital experiences,channeling the same focus and strategic thinking
-            into every website.</p>
-    </div>
+  <div class="div2">
+    <p><span>✓ Career Objectives:</span><br>
+      Motivated IT student seeking an internship to gain
+      hands-on experience in software development and contribute to real-world projects.
+      To create high-quality, responsive websites and explore my technical abilities for future career growth.
+    </p>
+  </div>
 
-    <div class="div2">
-        <p> <span style="font-weight:bold;"> ✓ Career Objectives:</span> <br>
-            Motivated IT student seeking an internship to gain
-            hands-on experience in software development and contribute to real-world projects.
-            To create high-quality website that responses and gives accurate data. And to have experience on creating
-            website and explore my
-            technical abilities to make me an ideal candidate for the position. </p>
-    </div>
+  <div class="div3">
+    <p><span>✓ Skills:</span><br>
+      • Basic Web Design<br>
+      • CapCut Editing<br>
+      • Basic HTML Programming<br>
+      • Teamwork & Leadership<br>
+      • Time Management & Communication
+    </p>
+  </div>
 
-    <div class="div3">
-        <span style="font-weight:bold;"> ✓ Skills:</span> <br>
-
-        • Basic Web Designer <br>
-
-        • Capcut Editor <br>
-
-        • Basic HTML Programming <br>
-
-        • Teamwork and Leadership <br>
-
-        • Time Management and Communication <br>
-
-    </div>
-
-    <div class="div5">
-        <p> <span style="font-weight:bold;"> ✓ Experiences: <br> Web Developer/Designer <br> Company name: SparkSkill
-                <br> March 2025 - Present</span> <br>
-            Skilled in front-end development using HTML, CSS, and JavaScript, with
-            proven experience in efficiently programming, troubleshooting, and optimizing responsive and user-friendly
-            websites and web applications.</p>
-    </div>
-
-
-
+  <div class="div5">
+    <p><span>✓ Experiences:</span><br>
+      <b>Web Developer/Designer</b><br>
+      Company: SparkSkill<br>
+      March 2025 - Present<br><br>
+      Skilled in front-end development using HTML, CSS, and JavaScript, with
+      experience in building, optimizing, and troubleshooting responsive and user-friendly
+      web applications.
+    </p>
+  </div>
 
 </body>
-
 </html>
