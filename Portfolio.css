@@ -376,4 +376,24 @@ body {
   .social-links {
     flex-direction: column;
   }
+} 
+
+.section-divider {
+  border: none;
+  height: 2px;
+  width: 80%;
+  margin: 40px auto;
+  background-color: red;
+  box-shadow: 0 0 10px red, 0 0 20px rgba(255, 0, 0, 0.6);
+  animation: glow 2s infinite alternate;
 }
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px red, 0 0 10px rgba(255, 0, 0, 0.4);
+  }
+  to {
+    box-shadow: 0 0 15px red, 0 0 30px rgba(255, 0, 0, 0.7);
+  }
+}
+
