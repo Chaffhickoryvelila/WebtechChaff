@@ -341,7 +341,11 @@ body {
 
   .navbar-toggler {
     display: block;
+    
   }
+  .navbar-toggler-icon {
+  filter: invert(23%) sepia(96%) saturate(7499%) hue-rotate(355deg) brightness(101%) contrast(115%);
+}
 
   .nav-text {
     display: none;
@@ -387,6 +391,5 @@ body {
   }
 }
 
-.navbar-toggler-icon {
-  filter: invert(100%); /* turns it white */
-}
+
+
