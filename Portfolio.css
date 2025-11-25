@@ -386,3 +386,7 @@ body {
     flex-direction: column;
   }
 }
+
+.navbar-toggler-icon {
+  filter: invert(100%); /* turns it white */
+}
